@@ -6,7 +6,7 @@ RUN wget https://github.com/ihciah/shadow-tls/releases/download/v0.3.3/shadow-tl
     -O shadowtls && chmod +x shadowtls
 
 CMD ["./shadowtls", \
-     "-proxy", "0.0.0.0:4443", \
-     "-sni", "www.microsoft.com", \
-     "-password", "supersecret123", \
+     "--proxy", "0.0.0.0:4443", \
+     "--sni", "www.microsoft.com", \
+     "--password", "supersecret123", \
      "-v3"]
