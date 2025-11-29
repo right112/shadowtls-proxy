@@ -2,7 +2,7 @@ FROM alpine:latest
 RUN apk add --no-cache wget
 WORKDIR /app
 
-RUN wget https://github.com/ichiaha/shadow-tls/releases/download/v0.2.24/shadow-tls-x86_64-unknown-linux-musl \
+RUN wget https://github.com/ihciah/shadow-tls/releases/download/v0.3.3/shadow-tls-x86_64-unknown-linux-musl \
     -O shadowtls && chmod +x shadowtls
 
 CMD ["./shadowtls", \
