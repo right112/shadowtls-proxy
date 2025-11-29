@@ -1,10 +1,16 @@
 services:
-  - type: web
-    name: shadowtls-proxy
+  - name: shadowtls-proxy
+    type: web
     env: docker
     region: singapore
     plan: free
     dockerfilePath: Dockerfile
     autoDeploy: true
+
+    ports:
+      - port: 4443
+        protocol: tcp
+        public: true
+
     envVars:
       PASSWORD: supersecret123
